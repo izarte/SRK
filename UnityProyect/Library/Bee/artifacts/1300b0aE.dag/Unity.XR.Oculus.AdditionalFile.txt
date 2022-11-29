@@ -1,1 +1,1 @@
-/media/data/Documentos compartidos/SRK
+/home/jose/Desktop/SRK/UnityProyect
