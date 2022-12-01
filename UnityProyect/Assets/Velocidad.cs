@@ -13,10 +13,11 @@ using twist = RosMessageTypes.Geometry.TwistMsg;
 public class Velocidad : MonoBehaviour{
 
     Text textoVelocidad;
-    string velocidadZ = "0";
+    string velocidadX = "0";
+    string giroZ = "0";
     ROSConnection ros;
 
-    public string topic = "/mobile_base/commands/velocity";
+    public string topic = "/cmd_vel";
     void Start(){
         textoVelocidad = GetComponent<Text>();
         ros = ROSConnection.GetOrCreateInstance();
@@ -25,14 +26,15 @@ public class Velocidad : MonoBehaviour{
 
     void Callback(twist msg)
     {   
-        velocidadZ = msg.linear.x.ToString("F2");
+        velocidadX = msg.linear.x.ToString("F2");
+        giroZ = msg.angular.z.ToString("F2");
         //Debug.Log(velocidadZ);
         //textoVelocidad.text = "Velocidad: " + velocidadZ;
     }
 
     void Update()
     {
-        textoVelocidad.text = "Velocidad: " + velocidadZ; 
+        textoVelocidad.text = "Velocidad: " + velocidadX + "\n\n" + "Velocidad Giro: " + giroZ; 
         //Debug.Log(velocidadZ);
     }
 
