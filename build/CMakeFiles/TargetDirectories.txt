@@ -1,0 +1,3 @@
+/media/data/Documentos compartidos/SRK/build/CMakeFiles/COMIntegration.dir
+/media/data/Documentos compartidos/SRK/build/CMakeFiles/edit_cache.dir
+/media/data/Documentos compartidos/SRK/build/CMakeFiles/rebuild_cache.dir

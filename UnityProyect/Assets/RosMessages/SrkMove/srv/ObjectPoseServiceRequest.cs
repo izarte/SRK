@@ -7,7 +7,7 @@ using Unity.Robotics.ROSTCPConnector.MessageGeneration;
 
 namespace RosMessageTypes.SrkMove
 {
-    [Serializable]
+    [Serializable] // 
     public class ObjectPoseServiceRequest : Message
     {
         public const string k_RosMessageName = "srk_move/ObjectPoseService";
@@ -27,8 +27,8 @@ namespace RosMessageTypes.SrkMove
 
         public static ObjectPoseServiceRequest Deserialize(MessageDeserializer deserializer) => new ObjectPoseServiceRequest(deserializer);
 
-        private ObjectPoseServiceRequest(MessageDeserializer deserializer)
-        {
+        private ObjectPoseServiceRequest(MessageDeserializer deserializer) 
+        { 
             deserializer.Read(out this.object_name);
         }
 
@@ -39,7 +39,7 @@ namespace RosMessageTypes.SrkMove
 
         public override string ToString()
         {
-            return "ObjectPoseServiceRequest: " +
+            return "ObjectPoseServiceRequest: " + // Re
             "\nobject_name: " + object_name.ToString();
         }
 
