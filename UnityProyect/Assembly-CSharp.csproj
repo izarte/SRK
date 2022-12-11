@@ -184,6 +184,7 @@
      <Compile Include="Assets/Oculus/SampleFramework/Usage/SpatialAnchor/Scripts/AnchorUIManager.cs" />
      <Compile Include="Assets/Oculus/SampleFramework/Usage/Passthrough/Scripts/SelectivePassthroughExperience.cs" />
      <Compile Include="Assets/Oculus/SampleFramework/Usage/HandsTrainExample/Scripts/TrackSegment.cs" />
+     <Compile Include="Assets/laser.cs" />
      <None Include="Assets/Oculus/SampleFramework/Usage/HandsTrainExample/Shaders/XingLightShader.shader" />
      <None Include="Assets/Oculus/SampleFramework/Usage/SceneManager/Shaders/Hidden.shader" />
      <None Include="Assets/Oculus/SampleFramework/Usage/SceneManager/Shaders/Wall.shader" />
@@ -873,6 +874,9 @@
     </Reference>
     <Reference Include="Unity.TextMeshPro">
         <HintPath>/home/jose/Desktop/SRK/UnityProyect/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+        <HintPath>/home/jose/Desktop/SRK/UnityProyect/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Subsystem.Registration">
         <HintPath>/home/jose/Desktop/SRK/UnityProyect/Library/ScriptAssemblies/Unity.Subsystem.Registration.dll</HintPath>

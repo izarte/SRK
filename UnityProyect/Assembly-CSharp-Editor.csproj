@@ -753,6 +753,9 @@
     <Reference Include="Unity.TextMeshPro">
         <HintPath>/home/jose/Desktop/SRK/UnityProyect/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+        <HintPath>/home/jose/Desktop/SRK/UnityProyect/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Subsystem.Registration">
         <HintPath>/home/jose/Desktop/SRK/UnityProyect/Library/ScriptAssemblies/Unity.Subsystem.Registration.dll</HintPath>
     </Reference>
