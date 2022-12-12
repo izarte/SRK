@@ -12,29 +12,23 @@ using twist = RosMessageTypes.Geometry.TwistMsg;
 
 public class Velocidad : MonoBehaviour{
 
-    Text textoVelocidad;
-    string velocidadX = "0";
-    string giroZ = "0";
-    ROSConnection ros;
+    public ROSConnection ros;
+    public Text textoVelocidad;
+    public Controller controller;
 
-    public string topic = "/cmd_vel";
+    private string linear_speed = "0";
+    private string rotation_speed = "0";
+    
     void Start(){
         textoVelocidad = GetComponent<Text>();
-        ros = ROSConnection.GetOrCreateInstance();
-        ros.Subscribe<twist>(topic, Callback); 
-    }
-
-    void Callback(twist msg)
-    {   
-        velocidadX = msg.linear.x.ToString("F2");
-        giroZ = msg.angular.z.ToString("F2");
-        //Debug.Log(velocidadZ);
-        //textoVelocidad.text = "Velocidad: " + velocidadZ;
     }
 
     void Update()
     {
-        textoVelocidad.text = "Velocidad: " + velocidadX + "\n\n" + "Velocidad Giro: " + giroZ; 
+        linear_speed = controller.getLinearSpeed().ToString("F2");
+        rotation_speed = controller.getAngularSpeed().ToString("F2");
+        
+        textoVelocidad.text = "Velocidad: " + linear_speed + "\n\n" + "Velocidad Giro: " + rotation_speed; 
         //Debug.Log(velocidadZ);
     }
 

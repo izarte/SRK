@@ -14,7 +14,7 @@ using RosMessageTypes.Sensor;
 public class laser : MonoBehaviour
 {
     public string topic = "/scan";
-    ROSConnection ros;
+    public ROSConnection ros;
     float zona_i = 0;
     float zona_m = 0;
     float zona_d = 0;
@@ -29,7 +29,6 @@ public class laser : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ros = ROSConnection.GetOrCreateInstance();
         ros.Subscribe<LaserScanMsg>(topic, Callback); 
         izqlaser = transform.GetChild(2).GetComponent<Image>();
         cenlaser = transform.GetChild(1).GetComponent<Image>();
