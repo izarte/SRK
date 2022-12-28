@@ -1,1 +1,1 @@
-C:\Users\papel\projects\SRK\UnityProyect
+/home/jose/Desktop/SRK/UnityProyect

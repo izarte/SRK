@@ -211,7 +211,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 20745380}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 100}
+  m_LocalPosition: {x: 0, y: 0, z: 175}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -441,7 +441,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e943813b8be59db2c8076ce74a81928b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  topic: /camera/rgb/image_raw
+  topic: /camera/rgb/aruco
   display: {fileID: 231762463}
 --- !u!4 &565074555
 Transform:
@@ -944,7 +944,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ros: {fileID: 2040117728}
   publishMessageFrequency: 0.5
-  topicName: /cmd_vel
+  topicNamePub: /mobile_base/commands/velocity
+  topicNameSub: /collision
 --- !u!4 &1386963233
 Transform:
   m_ObjectHideFlags: 0
@@ -1070,7 +1071,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7acef0b79454c9b4dae3f8139bc4ba77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_RosIPAddress: 127.0.0.1
+  m_RosIPAddress: 192.168.1.201
   m_RosPort: 10000
   m_ConnectOnStart: 1
   m_KeepaliveTime: 1

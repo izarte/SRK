@@ -14,7 +14,7 @@ public class Controller : MonoBehaviour
 {
     public ROSConnection ros;
     public float publishMessageFrequency = 0.5f;
-    public string topicNamePub = "/cmd_vel";
+    public string topicNamePub = "/mobile_base/commands/velocity";
     public string topicNameSub = "/collision";
     public const float MAX_LINEAR = 2;
     public const float MAX_AGULAR = 1;
@@ -55,7 +55,11 @@ public class Controller : MonoBehaviour
             linear_factor = increase_factor(linear_speed, -0.2f, MAX_LINEAR, MIN_LINEAR);
             Debug.Log("changed speed factor" + linear_factor);
         }
-        linear_speed = collision ? 0 : calculate_speed(joystick.y, linear_factor);
+        linear_speed = calculate_speed(joystick.y, linear_factor);
+        
+        if (collision && linear_speed > 0)
+            linear_speed = 0;
+
         angular_speed = calculate_speed(joystick.x, angular_factor);
 
         if (timeElapsed > publishMessageFrequency)
