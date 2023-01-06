@@ -8,6 +8,13 @@ All ROS instructions are described at [ros README]
 - Unity 2021.3.14f1
 
 ## Installation
+For ROS module, download it and follow steps in README
+```sh
+git submodule init
+git submodule update
+```
+
+
 Once Unity is installed, it is necessary to install some plug ins
 
 - ROS-TCP: In order to install, click in Window -> Package Manager. Click in + -> Add package from gir url and paste this url https://github.com/Unity-Technologies/ROS-TCP-Connector.git?path=/com.unity.robotics.ros-tcp-connector.
